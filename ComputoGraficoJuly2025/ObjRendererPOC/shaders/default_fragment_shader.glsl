@@ -16,9 +16,6 @@ struct Material {
     sampler2D texture_emissive1;
     sampler2D texture_normal1;
 
-    // You can add more texture types here if your models support them
-    // sampler2D texture_normal1;
-    // sampler2D texture_height1;
     vec3 ambient;
     vec3 diffuse;
     vec3 specular;
@@ -35,9 +32,9 @@ struct Light {
     vec3 diffuse;
     vec3 specular;
 };
-//uniform Light light; // Example light
+
 Light light;
-uniform vec3 viewPos; // Camera position in world space
+uniform vec3 viewPos; 
 
 vec3 ambient(Light L, Material M)
 {
@@ -46,20 +43,22 @@ vec3 ambient(Light L, Material M)
 
 vec3 diffuse(Light L, Material M, vec3 Normal)
 {
-    vec4 materialDiffuse = texture(M.texture_diffuse1,TexCoords);
-    return (max(0.0f, dot(normalize(L.position), normalize(Normal))) * L.diffuse * materialDiffuse.xyz);
+    vec3 lightDir = normalize(-L.direction); // Directional light points in this direction
+    vec3 materialDiffuse = M.diffuse * texture(M.texture_diffuse1, TexCoords).rgb;
+    float diff = max(dot(normalize(Normal), lightDir), 0.0);
+    return diff * L.diffuse * materialDiffuse;
 }
 
-vec3 specular(vec3 eye,vec3 vertexPos,Light L,Material M, vec3 Normal )
+
+vec3 specular(Light L, Material M, vec3 Normal, vec3 FragPos)
 {
-	vec3 view = normalize(eye) - normalize(vertexPos);
-	vec3 RE = normalize(reflect((eye - L.position),Normal));
-	vec3 specular = vec3(0.0f,0.0f,0.0f);
-	if(dot(L.position,view) > 0.0)
-	{
-		specular = L.specular * M.specular * pow(max(0.0f,dot(view,RE)),M.shininess);
-	}
-	return specular;
+    vec3 lightDir = normalize(-L.direction);
+    vec3 viewDir = normalize(viewPos - FragPos);
+    vec3 reflectDir = reflect(-lightDir, normalize(Normal));
+    
+    vec3 materialSpecular = M.specular * texture(M.texture_specular1, TexCoords).rgb;
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), M.shininess);
+    return spec * L.specular * materialSpecular;
 }
 
 
@@ -71,24 +70,25 @@ void main()
     light.direction = vec3(1.0, 1.0, 1.0);
     light.position = vec3(0.0f,0.0f,1.0f);
 
-    vec3 norm = normalize(texture(material.texture_normal1, TexCoords).rgb);
-   // vec3 norm = normalize(Normal);
+  vec3 normalMap = texture(material.texture_normal1, TexCoords).xyz;
+
+    
     vec3 lightDir = normalize(light.direction); 
 
     mat4 matForNormals = transpose(inverse(cameraOut * accumTransOut));
-    norm = normalize(matForNormals * vec4(norm,1.0)).xyz;
+    normalMap = normalize(matForNormals * vec4(normalMap,1.0)).xyz;
     
     // Specular color from material's specular property AND specular texture
     // Si no hay texture_specular1, la textura por defecto de OpenGL es blanca (1,1,1)
     // por lo que si el modelo solo tiene color especular y no textura, igualmente funciona.
 
     vec3 viewDir = normalize(viewPos - FragPos); 
-    vec3 reflectDir = reflect(-lightDir, norm);  
+    vec3 reflectDir = reflect(-lightDir, normalMap);  
 
     vec3 emissiveTexture = texture(material.texture_emissive1, TexCoords).rgb;
     vec3 emissive = emissiveTexture * 0.5f;
         
-    vec3 base = ambient(light,material) + diffuse(light,material,norm) + specular(viewPos,FragPos,light,material,norm);
+    vec3 base = ambient(light,material) + diffuse(light,material,normalMap) + specular(light, material, normalMap, FragPos);
     vec3 result = base + emissive;
 
 
