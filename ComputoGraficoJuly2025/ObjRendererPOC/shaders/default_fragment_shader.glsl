@@ -57,7 +57,7 @@ vec3 specular(Light L, Material M, vec3 Normal, vec3 FragPos)
     vec3 reflectDir = reflect(-lightDir, normalize(Normal));
     
     vec3 materialSpecular = M.specular * texture(M.texture_specular1, TexCoords).rgb;
-    float spec = pow(max(dot(viewDir, reflectDir), 0.0), M.shininess);
+    float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0f);
     return spec * L.specular * materialSpecular;
 }
 
@@ -69,6 +69,7 @@ void main()
     light.specular = vec3(1.0, 1.0, 1.0);
     light.direction = vec3(1.0, 1.0, 1.0);
     light.position = vec3(0.0f,0.0f,1.0f);
+
 
   vec3 normalMap = texture(material.texture_normal1, TexCoords).xyz;
 

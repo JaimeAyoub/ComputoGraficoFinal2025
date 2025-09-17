@@ -172,7 +172,7 @@ Mesh Model::processMesh(aiMesh* mesh, const aiScene* scene) {
 		aiColor3D ambient(0.4f, 0.4f, 0.4f);
 		aiColor3D diffuse(0.2f, 0.2f, 0.2f);
 		aiColor3D specular(1.0f, 1.0f, 1.0f);
-		float shininess = 0.0f;
+		float shininess = 32.0f;
 
 		aiString aName;
 		if (aiReturn_SUCCESS == material->Get(AI_MATKEY_NAME, aName))
