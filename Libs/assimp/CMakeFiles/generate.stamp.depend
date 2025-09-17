@@ -1,0 +1,37 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.22/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakePackageConfigHelpers.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/Platform/WindowsPaths.cmake
+C:/Program Files/CMake/share/cmake-3.22/Modules/WriteBasicConfigVersionFile.cmake
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/3.22.1/CMakeCCompiler.cmake
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/3.22.1/CMakeCXXCompiler.cmake
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/3.22.1/CMakeRCCompiler.cmake
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/3.22.1/CMakeSystem.cmake
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeLists.txt
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/assimp.pc.in
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/cmake-modules/FindPkgMacros.cmake
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/cmake-modules/PrecompiledHeader.cmake
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/cmake-modules/assimp-plain-config.cmake.in
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/cmake-modules/cmake_uninstall.cmake.in
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/include/assimp/config.h.in
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/include/assimp/revision.h.in

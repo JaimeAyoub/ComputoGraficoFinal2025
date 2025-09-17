@@ -1,0 +1,11 @@
+Model Information:
+* title:	Firelink greatsword - Gwyn phase
+* source:	https://sketchfab.com/3d-models/firelink-greatsword-gwyn-phase-221096510b5841bb98f678606567b073
+* author:	Michal Cavrnoch (https://sketchfab.com/MichalCavrnoch)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Firelink greatsword - Gwyn phase" (https://sketchfab.com/3d-models/firelink-greatsword-gwyn-phase-221096510b5841bb98f678606567b073) by Michal Cavrnoch (https://sketchfab.com/MichalCavrnoch) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

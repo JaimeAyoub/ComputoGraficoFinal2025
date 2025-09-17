@@ -1,0 +1,16 @@
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/uninstall.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/UpdateAssimpLibsDebugSymbolsAndDLLs.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/INSTALL.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/ALL_BUILD.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/CMakeFiles/ZERO_CHECK.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/contrib/zlib/CMakeFiles/zlibstatic.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/contrib/zlib/CMakeFiles/INSTALL.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/contrib/zlib/CMakeFiles/ALL_BUILD.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/code/CMakeFiles/assimp.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/code/CMakeFiles/INSTALL.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/samples/SimpleTexturedOpenGL/CMakeFiles/assimp_simpletexturedogl.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/samples/SimpleTexturedOpenGL/CMakeFiles/INSTALL.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/samples/SimpleTexturedDirectx11/CMakeFiles/assimp_simpletextureddirectx11.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/samples/SimpleTexturedDirectx11/CMakeFiles/INSTALL.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/samples/SimpleOpenGL/CMakeFiles/assimp_simpleogl.dir
+H:/Desarrollo/ComputoGrafico2025/libs/assimp/samples/SimpleOpenGL/CMakeFiles/INSTALL.dir

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="H:\Desarrollo\ComputoGrafico2025\libs\assimp\CMakeFiles\d4e5c80a029ca82e4eca232e58cd853c\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="H:\Desarrollo\ComputoGrafico2025\libs\assimp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="H:\Desarrollo\ComputoGrafico2025\libs\assimp\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{0D2E44BC-BA29-3B80-9270-C75EBAAC16A5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
