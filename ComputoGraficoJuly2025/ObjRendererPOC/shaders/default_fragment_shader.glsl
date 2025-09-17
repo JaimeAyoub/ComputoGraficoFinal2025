@@ -71,10 +71,6 @@ void main()
     light.direction = vec3(1.0, 1.0, 1.0);
     light.position = vec3(0.0f,0.0f,1.0f);
 
-    vec4 nPos =vec4(FragPos, 1.0);
-
-    nPos = cameraOut * accumTransOut * vec4(FragPos, 1.0);
-
     vec3 norm = normalize(texture(material.texture_normal1, TexCoords).rgb);
    // vec3 norm = normalize(Normal);
     vec3 lightDir = normalize(light.direction); 
@@ -92,7 +88,7 @@ void main()
     vec3 emissiveTexture = texture(material.texture_emissive1, TexCoords).rgb;
     vec3 emissive = emissiveTexture * 0.5f;
         
-    vec3 base = ambient(light,material) + diffuse(light,material,norm) + specular(viewPos,FragPos.xyz,light,material,norm);
+    vec3 base = ambient(light,material) + diffuse(light,material,norm) + specular(viewPos,FragPos,light,material,norm);
     vec3 result = base + emissive;
 
 

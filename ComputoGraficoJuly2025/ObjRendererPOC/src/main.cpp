@@ -116,6 +116,7 @@ int main() {
         glm::vec3 minBB, maxBB;
         std::tie(minBB, maxBB) = ourModel.BoundingBox();
         glm::vec3 dimension = maxBB - minBB;
+
         float maxValue = std::max(dimension.x, std::max(dimension.y, dimension.z));
         model = glm::scale(model,glm::vec3(2.0f/maxValue));       // Scale model (example, might need adjustment)
         ourShader.setMat4("model", model);

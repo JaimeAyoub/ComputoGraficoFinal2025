@@ -18,15 +18,13 @@ out mat4 modelOut;
 
 void main()
 {
-
     
     TexCoords = aTexCoords;
-    mat4 normalsMat = transpose(inverse(view*accumTrans));
 
     FragPos = vec3(model * vec4(aPos, 1.0)); // Transform position to world space
 
        cameraOut = view;
        accumTransOut = accumTrans;
        modelOut = model;
-    gl_Position = projection *view * accumTrans * vec4(aPos, 1.0);
+   gl_Position = projection * view * model * accumTrans * vec4(aPos, 1.0);
 }
