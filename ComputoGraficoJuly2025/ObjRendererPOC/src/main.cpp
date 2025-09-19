@@ -99,10 +99,7 @@ int main() {
 
         //Pass acumTrans
        glfwGetCursorPos(window, &posxMouse, &posyMouse);
-       glm::mat4 accumTransX = glm::rotate(glm::mat4(1.0f), glm::radians(static_cast<float>(posyMouse) * 20 / SCR_HEIGHT), glm::vec3(1.0f, 0.0f, 0.0f));
-       glm::mat4 accumTransY = glm::rotate(glm::mat4(1.0f), glm::radians(static_cast<float>(posxMouse) * 20 / SCR_WIDTH), glm::vec3(0.0f, 1.0f, 0.0f));
-       glm::mat4  accumTrans = accumTransX * accumTransY;
-       ourShader.setMat4("accumTrans", accumTrans);
+    
 
         // Camera/View transformation
         glm::mat4 view = glm::lookAt(cameraPos, cameraFront, cameraUp);
@@ -110,6 +107,10 @@ int main() {
 
         // Render the loaded model
         glm::mat4 model = glm::mat4(1.0f); // Make sure to initialize to identity matrix!
+        glm::mat4 accumTransX = glm::rotate(model, glm::radians(static_cast<float>(posyMouse) * 20 / SCR_HEIGHT), glm::vec3(1.0f, 0.0f, 0.0f));
+        glm::mat4 accumTransY = glm::rotate(model, glm::radians(static_cast<float>(posxMouse) * 20 / SCR_WIDTH), glm::vec3(0.0f, 1.0f, 0.0f));
+        glm::mat4  accumTrans = accumTransX * accumTransY;
+        ourShader.setMat4("accumTrans", accumTrans);
         glm::vec3 reCenter = ourModel.GetCenter();
         reCenter.y -= 0.5f;
         reCenter.z /= 6.0f;
