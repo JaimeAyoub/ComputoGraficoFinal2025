@@ -44,7 +44,7 @@ vec3 ambient(Light L, Material M)
 
 vec3 diffuse(Light L, Material M, vec3 Normal)
 {
-    vec3 lightDir = normalize(-L.direction); // Directional light points in this direction
+    vec3 lightDir = normalize(-L.direction); 
     vec3 materialDiffuse = M.diffuse * texture(M.texture_diffuse1, TexCoords).rgb;
     float diff = max(dot(normalize(Normal), lightDir), 0.0);
     return diff * L.diffuse * materialDiffuse;
