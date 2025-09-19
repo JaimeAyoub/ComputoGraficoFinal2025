@@ -36,6 +36,7 @@ struct Light {
 Light light;
 uniform vec3 viewPos; 
 
+
 vec3 ambient(Light L, Material M)
 {
    return L.ambient * M.ambient;
@@ -56,7 +57,7 @@ vec3 specular(Light L, Material M, vec3 Normal, vec3 FragPos)
     vec3 viewDir = normalize(viewPos - FragPos);
     vec3 reflectDir = reflect(-lightDir, normalize(Normal));
     
-    vec3 materialSpecular = M.specular * texture(M.texture_specular1, TexCoords).rgb;
+    vec3 materialSpecular =  texture(M.texture_specular1, TexCoords).rgb;
     float spec = pow(max(dot(viewDir, reflectDir), 0.0), 32.0f);
     return spec * L.specular * materialSpecular;
 }
@@ -88,7 +89,7 @@ void main()
 
     vec3 emissiveTexture = texture(material.texture_emissive1, TexCoords).rgb;
     vec3 emissive = emissiveTexture * 0.5f;
-        
+   
     vec3 base = ambient(light,material) + diffuse(light,material,normalMap) + specular(light, material, normalMap, FragPos);
     vec3 result = base + emissive;
 

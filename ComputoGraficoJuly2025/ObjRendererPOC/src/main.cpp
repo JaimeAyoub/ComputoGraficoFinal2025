@@ -30,7 +30,7 @@ glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 // Delta time for movement
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
-
+float timer = 0.0f;
 double posxMouse, posyMouse;
 
 int main() {
@@ -81,6 +81,7 @@ int main() {
         float currentFrame = static_cast<float>(glfwGetTime());
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
+        timer += 1.0f;
 
         // Input
         processInput(window);
@@ -120,6 +121,9 @@ int main() {
         float maxValue = std::max(dimension.x, std::max(dimension.y, dimension.z));
         model = glm::scale(model,glm::vec3(2.0f/maxValue));       // Scale model (example, might need adjustment)
         ourShader.setMat4("model", model);
+		ourShader.setFloat("delta", deltaTime);
+        ourShader.setFloat("time", timer);
+        std::cout << deltaTime << std::endl;
 
         // --- THIS IS WHERE YOUR SHADER INTERACTS WITH THE MODEL DATA ---
         // The Mesh::Draw method will bind the VAO, EBO, and textures.

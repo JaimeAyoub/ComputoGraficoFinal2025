@@ -16,12 +16,14 @@ out mat4 cameraOut;
 out mat4 accumTransOut;
 out mat4 modelOut;
 
+
 void main()
 {
     
     TexCoords = aTexCoords;
 
     FragPos = vec3(model * vec4(aPos, 1.0)); // Transform position to world space
+
 
        cameraOut = view;
        accumTransOut = accumTrans;
